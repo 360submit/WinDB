@@ -23,17 +23,20 @@ TobiiEyeTracker(TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_
   * 2 Smooth the fixation of ERP on the Sphere
 
 ## PanopticVideo-300 Dataset
-  * 1 Video Clips:
-  * 2 GroundTruth: 
+  * 1 Video Clips (300):
+  * 2 GroundTruth (300): 
 
 ## Proposed Framework(Baseline Model)
 ![Net](https://github.com/cvpr-submission/WinDB/tree/main/Figs/Net.png)  
-  * 1 The Training Process
-     ```run main.py Train=True```
-  * 2 The Testing Process
-     ```run main.py Test=True```
-  * 3 The Model Weight
+  * 1 The Training Process  
+     ```main.py Train=True```
+  * 2 The Testing Process  
+     ```main.py Test=True```
+  * 3 The Model Weight  
+     Model.pt
   * 4 Results
-  * 5 Evaluation Code
+     Results
+  * 5 Evaluation Code (Matlab)
+    ```MatricsOfMyERP.m``` and ```MatricsOfMyALLERP```
 
 ## Please note that to meet the CVPR2023 blind requirements, this code hides the issue module and related personal information.
