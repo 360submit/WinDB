@@ -1,4 +1,5 @@
-# This repository contains the code for CVPR 2023 submition paper WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.
+## This repository contains the code for CVPR 2023 submition paper 
+# WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.
 
 # Requirements.
 Visual Studio 2019, Matlab2016b, python3.6.4, pytorch1.10.0, CUDA10.2
