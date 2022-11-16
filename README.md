@@ -20,6 +20,7 @@
 ## Detailed procedure： 
 ### 1. WinDB Generation  
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
+
   * 1 Generate the longitude(lon.txt) and latitude(lat.txt) of WinDB  
   ```python ERP2WinDBLonLat.py``` 
   * 2 From ERP to WinDB based on LonLat of WinDB  
@@ -34,6 +35,7 @@
 
 ## PanopticVideo-300 Dataset
 <div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
+
   * 1 Video Clips (300):  
   * 2 GroundTruth (300):   
 
