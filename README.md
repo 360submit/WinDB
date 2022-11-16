@@ -2,13 +2,13 @@
 ## WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.
 
 ## Requirements.
-Visual Studio 2019  
-Matlab2016b    
-python3.6.4  
-pytorch1.10.0  
-CUDA10.2   
-Opencv python and C++(VisualStudio)  
-TobiiEyeTracker(TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)
+* Visual Studio 2019  
+* Matlab2016b    
+* python3.6.4  
+* pytorch1.10.0  
+* CUDA10.2   
+* Opencv python and C++(VisualStudio)  
+* TobiiEyeTracker(TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)
 
 ## Main Steps.
 ### 1.WinDB Generation->2.Fixation Collection(Tobii)->3.Fixation Generation(ERP)
