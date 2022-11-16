@@ -26,6 +26,8 @@
   * 2 From ERP to WinDB based on LonLat of WinDB  
   ```python ERP2WinDB.py```
 ### 2. Fixation Collection(Tobii)  
+<div align=center><img width="900" height="100" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
+
   * 1 Open the ```start.sln``` with Visual Studio 2019  
   * 2 Config property pages of ```start.sln```    
   * 3 run the ```start.sln``` and the Fixation Location(x,y) will be saved in PeopleID.txt  
