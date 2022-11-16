@@ -18,14 +18,14 @@
   * 2 run Tobii Eye Tracking and calibration.  
 ## Detailed procedure： 
 ### 1. WinDB Generation  
-  * 1 Generate the longitude(Lon) and latitude(Lat) of WinDB  
-  ```ERP2WinDBLonLat.py``` 
+  * 1 Generate the longitude(lon.txt) and latitude(lat.txt) of WinDB  
+  ```python ERP2WinDBLonLat.py``` 
   * 2 From ERP to WinDB based on LonLat of WinDB  
-  ```ERP2WinDB.py```
+  ```python ERP2WinDB.py```
 ### 2. Fixation Collection(Tobii)  
   * 1 Open the ```start.sln``` with Visual Studio 2019  
   * 2 Config property pages of ```start.sln```    
-  * 3 run the ```start.sln``` and the Location(x,y) will be saved in Fixation.txt  
+  * 3 run the ```start.sln``` and the Fixation Location(x,y) will be saved in PeopleID.txt  
 ### 3. Fixation Generation(ERP)  
   * 1 Convert the Location(x,y) of WinDB to ERP  
   * 2 Smooth the fixation of ERP on the Sphere  
@@ -45,6 +45,6 @@
   * 4 Results  
      Results  
   * 5 Evaluation Code (Matlab)  
-    ```MatricsOfMyERP.m``` and ```MatricsOfMyALLERP```
+    ```MatricsOfMyERP.m``` and ```MatricsOfMyALLERP.m```
 
 ## Please note that to meet the CVPR2023 blind requirements, this code hides the issue module and related personal information.
