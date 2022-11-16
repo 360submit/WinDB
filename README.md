@@ -29,9 +29,9 @@ TobiiEyeTracker(TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_
 ## Proposed Framework(Baseline Model)
 ![Net](https://github.com/cvpr-submission/WinDB/tree/main/Figs/Net.png)  
   * 1 The Training Process
-     run main.py Train=True
+     ```run main.py Train=True```
   * 2 The Testing Process
-     run main.py Test=True
+     ```run main.py Test=True```
   * 3 The Model Weight
     
   * 4 Results
