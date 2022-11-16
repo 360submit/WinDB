@@ -35,7 +35,9 @@
   * 2 GroundTruth (300):   
 
 ## Proposed Framework(Baseline Model)
-![Net](https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif)  
+<div align=center><img width="800" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
+<p align="center">
+Figure 1: The motivation of the newly proposed model. Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set. Our model has devised a very simple yet effective architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
   * 1 The Training Process    
      ```main.py Train=True```  
   * 2 The Testing Process    
