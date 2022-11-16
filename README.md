@@ -33,9 +33,7 @@ TobiiEyeTracker(TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_
   * 2 The Testing Process
      ```run main.py Test=True```
   * 3 The Model Weight
-    
   * 4 Results
-  
   * 5 Evaluation Code
 
 ## Please note that to meet the CVPR2023 blind requirements, this code hides the issue module and related personal information.
