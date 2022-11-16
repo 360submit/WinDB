@@ -28,6 +28,7 @@ TobiiEyeTracker
   * 2) GroundTruth:
 
 # Proposed Framework(Baseline Model)
+![Net](https://github.com/cvpr-submission/WinDB/tree/main/Figs/Net.png)  
   * 1) The Training Process
   * 2) The Testing Process
   * 3) The Model Weight
