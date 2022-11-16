@@ -26,7 +26,7 @@
   * 2 From ERP to WinDB based on LonLat of WinDB  
   ```python ERP2WinDB.py```
 ### 2. Fixation Collection(Tobii)  
-<div align=center><img width="900" height="100" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
+<div align=center><img width="400" height="100" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
 
   * 1 Open the ```start.sln``` with Visual Studio 2019  
   * 2 Config property pages of ```start.sln```    
@@ -44,7 +44,7 @@
 ## Proposed Model(Baseline Model)
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
 <p align="center">
-Figure 1: The motivation of the newly proposed model. Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set. Our model has devised a very simple yet effective architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
+Figure 1: The motivation of the newly proposed model. Subfigures A and B illustrate the **fixation shifting** phenomenon — very common in our set. Our model has devised **a very simple yet effective** architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
 
   * 1 The Training Process    
      ```main.py Train=True```  
@@ -55,6 +55,7 @@ Figure 1: The motivation of the newly proposed model. Subfigures A and B illustr
   * 4 Results  
      Results  
   * 5 Evaluation Code (Matlab)  
-    ```MatricsOfMyERP.m``` and ```MatricsOfMyALLERP.m```
+    ```MatricsOfMyERP.m```  
+    ```MatricsOfMyALLERP.m```
 
 ## Please note that to meet the CVPR2023 blind requirements, this code hides the issue module and related personal information.
