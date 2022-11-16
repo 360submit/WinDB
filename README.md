@@ -35,7 +35,7 @@
   * 2 GroundTruth (300):   
 
 ## Proposed Framework(Baseline Model)
-![Net](https://github.com/cvpr-submission/WinDB/tree/main/Figs/Net.png)  
+![Net](https://github.com/cvpr-submission/WinDB/tree/main/Figs/Net.gif)  
   * 1 The Training Process    
      ```main.py Train=True```  
   * 2 The Testing Process    
