@@ -24,8 +24,8 @@ WinDB Generation->Fixation Collection(Tobii)->Fixation Generation(ERP)
 3)
 
 # PanopticVideo-300 Dataset
-Video Clips:
-GroundTruth:
+1) Video Clips:
+2) GroundTruth:
 
 # Proposed Framework(Baseline Model)
 1) The Training Process
