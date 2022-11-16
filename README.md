@@ -39,7 +39,7 @@
   * 1 Video Clips (300):  
   * 2 GroundTruth (300):   
 
-## Proposed Framework(Baseline Model)
+## Proposed Model(Baseline Model)
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
 <p align="center">
 Figure 1: The motivation of the newly proposed model. Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set. Our model has devised a very simple yet effective architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
