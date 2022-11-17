@@ -1,29 +1,18 @@
 
 import os
 import cv2
-import Equirec2Perspec as E2P
 import numpy as np
-import copy
-import time
-from pandas import DataFrame
-
-## 将ERP转化为SPP
-## 这个是为了做消融实验
 
 color1=(1, 1, 1)
 color2=(0, 0, 0)
 
-# Read image
 num = 0
-## 投影平面大小
 width = 160
 height = 160
-## FOV的度数
 u_deg = 30
 v_deg = 30
 wFOV = 30
 hFOV = 30
-## 纱窗布局
 rows= 6
 columns = 12
 mydeg = 0
@@ -70,29 +59,46 @@ def addRoundedRectangleBorderGray():
     cv2.ellipse(img, (border_radius+edge_shift, height-border_radius),(border_radius, border_radius), 90, 0, 90, cor, line_thickness) 
     return img
 
-## 渐变填充
+def addRoundedRectangleBorderGrayLine(): 
+    cor = color1
+    img = np.zeros((int(160*3/2), 160*4, 3), dtype=np.uint8)
+    height, width, channels = img.shape 
+    border_radius = 8
+    line_thickness = 6
+    edge_shift = 0
+    cv2.line(img, (0, edge_shift), (width - 0, edge_shift), cor, line_thickness) 
+    cv2.line(img, (0, height), (width - 0, height), cor, line_thickness) 
+    cv2.line(img, (edge_shift, 0), (edge_shift, height - 0), cor, line_thickness) 
+    cv2.line(img, (width, 0), (width, height - 0), cor, line_thickness) 
+    #corners 
+    cv2.ellipse(img, (border_radius+ edge_shift, border_radius+edge_shift), (border_radius, border_radius), 180, 0, 90, cor, line_thickness) 
+    cv2.ellipse(img, (width-border_radius, border_radius), (border_radius, border_radius), 270, 0, 90, cor, line_thickness) 
+    cv2.ellipse(img, (width-border_radius, height-border_radius), (border_radius, border_radius), 0, 0, 90, cor, line_thickness) 
+    cv2.ellipse(img, (border_radius+edge_shift, height-border_radius),(border_radius, border_radius), 90, 0, 90, cor, line_thickness) 
+    return img*255
+
 def smoothWD1(img): 
     W = int(width/2)
     M1 = img[:,0:W,:]
     M2 = img[:,W:width,:]
-    kernels = [51,41,33,27,1]
+    kernels = [51,41,31,21,1]
     mm = 0
     resultA1 = np.empty((width,0,3),np.uint8)
     for ii in range(0, W,  int(W/5)):
         resultA1 = np.concatenate((resultA1,M1[:, ii:ii+int(W/5),:]),axis=1)
         nn = kernels[mm]
         mm = mm +1 
-        resultA2 = cv2.GaussianBlur(resultA1.astype('float64'), (nn, nn), nn, 0) # 填充
+        resultA2 = cv2.GaussianBlur(resultA1.astype('float64'), (nn, nn), nn, 0)
         resultA1 = resultA2
 
-    kernels = [51,41,33,27,1]
+    kernels = [51,41,31,21,1]
     mm = 0
     resultA3 = np.empty((width,0,3),np.uint8)
     for ii in range(W, 0, -int(W/5)):
         resultA3 = np.concatenate((M2[:, ii-int(W/5):ii,:],resultA3),axis=1)
         nn = kernels[mm]
         mm = mm +1 
-        resultA4 = cv2.GaussianBlur(resultA3.astype('float64'), (nn, nn), nn, 0) # 填充
+        resultA4 = cv2.GaussianBlur(resultA3.astype('float64'), (nn, nn), nn, 0)
         resultA3 = resultA4
     return np.concatenate((resultA2,resultA4),axis=1)
 
@@ -100,17 +106,17 @@ def smoothWD2(img):
     W = int(width/2)
     M1 = img[:,0:W,:]
     M2 = img[:,W:width,:]
-    kernels = [33,27,11,1,1]
+    kernels = [31,21,11,1,1]
     mm = 0
     resultA1 = np.empty((width,0,3),np.uint8)
     for ii in range(0, W,  int(W/5)):
         resultA1 = np.concatenate((resultA1,M1[:, ii:ii+int(W/5),:]),axis=1)
         nn = kernels[mm]
         mm = mm +1 
-        resultA2 = cv2.GaussianBlur(resultA1.astype('float64'), (nn, nn), nn, 0) # 填充
+        resultA2 = cv2.GaussianBlur(resultA1.astype('float64'), (nn, nn), nn, 0)
         resultA1 = resultA2
 
-    kernels = [33,27,11,1,1]
+    kernels = [31,21,11,1,1]
     mm = 0
     resultA3 = np.empty((width,0,3),np.uint8)
     for ii in range(W, 0, -int(W/5)):
@@ -150,7 +156,7 @@ def equir2pers():
     AwW = width*4
     #########################################################
     MaskGray = np.ones((AwH, AwW*3, 3), dtype=np.uint8)
-    Mask = np.ones((AwH, AwW*3, 3), dtype=np.uint8)
+    MaskAW = np.ones((AwH, AwW*3, 3), dtype=np.uint8)
     Back = np.ones((1080, 1920, 3), dtype=np.uint8)*255
     ######################################################
 
@@ -158,14 +164,27 @@ def equir2pers():
     output_dir = './Result/'
     ori_name = os.listdir(input_vid)
     ori_name.sort()
+
+    window = addWindow()
+    Borderori = addRoundedRectangleBorder()
+    BorderAW = np.concatenate((np.zeros((AwH, 30, 3),np.uint8),Borderori,np.zeros((AwH, 30, 3),np.uint8)),axis=1)
+    BorderGray = addRoundedRectangleBorderGray()
+    for oo in range(0, 3):
+        MaskGray[:,AwW*oo:AwW*(oo+1),:] = MaskGray[:,AwW*oo:AwW*(oo+1),:]*BorderGray
+        MaskAW[:,AwW*oo:AwW*(oo+1),:] = MaskAW[:,AwW*oo:AwW*(oo+1),:]* BorderAW
+    edgesAW = cv2.Canny(MaskAW*255, 128, 200)
+    edgesAW = cv2.GaussianBlur(edgesAW,(5,5),0)
+    edgesAW = cv2.merge((edgesAW,edgesAW,edgesAW))
+    edgesAW[edgesAW>0]=255
+    edgesGray = cv2.Canny(MaskGray*255, 128, 200)
+    edgesGray = cv2.GaussianBlur(edgesGray,(1,1),0)
+    edgesGray = cv2.merge((edgesGray,edgesGray,edgesGray))
+    edgesGray[edgesGray>0]=255
+
     lon = loadtxtmethod('lon.txt') # 1440,1920
     lat = loadtxtmethod('lat.txt')
     lon = lon * equ_cx + equ_cx
     lat = lat * equ_cy + equ_cy
-
-    window = addWindow()
-    Borderori = addRoundedRectangleBorder()
-    BorderGray = addRoundedRectangleBorderGray()
 
     for file in range(0, len(ori_name)):
         vid_name = os.path.join(input_vid, ori_name[file])
@@ -178,14 +197,11 @@ def equir2pers():
         num=0
         while(cap.isOpened()):
             ret, img = cap.read()
-            if ret==True:
-                # Read image
-                
+            if ret==True:                
                 if len(img.shape) == 2:
                     img = img[..., None]
                 ori = cv2.resize(img,(1920,960),cv2.INTER_AREA)
 
-                # start_time = time.time()
                 persp = cv2.remap(ori, lon.astype(np.float32), lat.astype(np.float32), cv2.INTER_CUBIC, borderMode=cv2.BORDER_WRAP) 
 
                 resultBImg = persp[0:AwH,:,:]
@@ -193,7 +209,7 @@ def equir2pers():
                 resultCImg = persp[height*6+AwH:height*6+AwH+AwH,:,:]
 
                 for mm in range(0, rows):
-                    for nn in range(0, columns):  ## 第一行
+                    for nn in range(0, columns):
                         if mm == 0 or mm == (rows-1):
                             Window = resultAImg[height*mm:height*(mm+1), width*nn:width*(nn+1),:]
                             resultAImg[height*mm:height*(mm+1), width*nn:width*(nn+1),:] = smoothWD1(Window)
@@ -202,24 +218,17 @@ def equir2pers():
                             resultAImg[height*mm:height*(mm+1), width*nn:width*(nn+1),:] = smoothWD2(Window)
                 resultAImg = resultAImg*window
                 for oo in range(0, 3):
-                    Border = np.concatenate((np.zeros((AwH, 30, 3),np.uint8),Borderori,np.zeros((AwH, 30, 3),np.uint8)),axis=1)
-                    resultBImg[:,AwW*oo:AwW*(oo+1),:] = resultBImg[:,AwW*oo:AwW*(oo+1),:]*Border
-                    MaskGray[:,AwW*oo:AwW*(oo+1),:] = MaskGray[:,AwW*oo:AwW*(oo+1),:]*BorderGray
+                    resultBImg[:,AwW*oo:AwW*(oo+1),:] = resultBImg[:,AwW*oo:AwW*(oo+1),:]*BorderAW
+                    resultCImg[:,AwW*oo:AwW*(oo+1),:] = resultCImg[:,AwW*oo:AwW*(oo+1),:]*BorderAW
 
-                    resultCImg[:,AwW*oo:AwW*(oo+1),:] = resultCImg[:,AwW*oo:AwW*(oo+1),:]*Border
-                    Mask[:,AwW*oo:AwW*(oo+1),:] = Mask[:,AwW*oo:AwW*(oo+1),:]* Border
+                resultAImg[:AwH,:,:] = (resultAImg[:AwH,:,:]*MaskGray*0.5+resultAImg[:AwH,:,:]*(1-MaskGray))*(1-edgesGray/255)+edgesGray/1.5
+                resultAImg[-AwH:,:,:] = (resultAImg[-AwH:,:,:]*MaskGray*0.5+resultAImg[-AwH:,:,:]*(1-MaskGray))*(1-edgesGray/255)+edgesGray/1.5
 
-                resultAImg[:AwH,:,:] = resultAImg[:AwH,:,:]*MaskGray*0.5+resultAImg[:AwH,:,:]*(1-MaskGray)
-                resultAImg[-AwH:,:,:] = resultAImg[-AwH:,:,:]*MaskGray*0.5+resultAImg[-AwH:,:,:]*(1-MaskGray)
                 Back[60:1080-60,:,:] = resultAImg
-                Back[:AwH,:,:] = resultBImg*Mask + Back[:AwH,:,:]*(1-Mask)
-                Back[-AwH:,:,:] = resultCImg*Mask + Back[-AwH:,:,:]*(1-Mask)
+                Back[:AwH,:,:] = (resultBImg*MaskAW + Back[:AwH,:,:]*(1-MaskAW))*(1-edgesAW/255) + edgesAW/1.5
+                Back[-AwH:,:,:] = (resultCImg*MaskAW + Back[-AwH:,:,:]*(1-MaskAW))*(1-edgesAW/255) + edgesAW/1.5
 
-                '''end_time = time.time()
-                print("time cost:", float(end_time - start_time) * 1000.0, "ms")'''
-
-                cv2.imwrite(save_path+'\\'+vid_name[file][:-4]+'_%04d' % num+'.jpg', Back)  # 加浮窗
-                
+                cv2.imwrite(save_path+'\\'+vid_name[file][:-4]+'_%04d' % num+'.jpg', Back)
                 
                 print('Finished')
             num = num + 1
