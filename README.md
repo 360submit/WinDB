@@ -67,5 +67,5 @@ Our model has devised “a very simple yet effective” architecture, which perf
     ```MatricsOfMyERP.m```  
     ```MatricsOfMyALLERP.m```
 
-## Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information, and our set contains no military or sensitive scenes
+## Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information, and our set contains no military or sensitive scenes.
 
