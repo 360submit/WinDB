@@ -67,15 +67,15 @@ The motivation of the newly proposed model.
 Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set.   
 Our model has devised “a very simple yet effective” architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
 
-  * 1 The **Training** Process    
+  * 1) The **Training** Process    
      ```Python main.py --- Train=True```  
-  * 2 The **Inference** Process    
+  * 2) The **Inference** Process    
      ```Python main.py --- Test=True```  
-  * 3 The **Model Weight**   
+  * 3) The **Model Weight**   
      Model.pt (51.2MB)
-  * 4 Results  
+  * 4) Results  
      Results  
-  * 5 **Evaluation** Code (Matlab)  
+  * 5) **Evaluation** Code (Matlab)  
     ```MatricsOfMyERP.m```  
     ```MatricsOfMyALLERP.m```
 
