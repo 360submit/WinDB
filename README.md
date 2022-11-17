@@ -1,5 +1,17 @@
 ### This repository contains the code for CVPR 2023 submission paper   
-## WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.  
+# WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.  
+
+## Table of Contents
+- [Requirements](#requirements)
+- [Tobii Installation](#tobii-installation)
+- [Main Steps](#main-steps)
+- [Detailed Procedure of Eye Tracking Data:](#detailed-procedure-of-eye-tracking-data)
+  * [1. WinDB Generation](#1-windb-generation)
+  * [2. Fixation Collection](#2-fixation-collection)
+  * [3. Fixation Generation](#3-fixation-generation)
+- [PanopticVideo-300 Dataset](#panopticvideo-300-dataset)
+- [Proposed Model](#proposed-model)
+
 
 ## Requirements.  
 * Visual Studio 2019   
@@ -10,14 +22,14 @@
 * Opencv python and C++  
 * Tobii Eye Tracking installation package (TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)  
 
-## Main Steps.  
-### 1. WinDB Generation -> 2. Fixation Collection (Tobii) -> 3. Fixation Generation (ERP)  
-
-##  Pre-operation --- Tobii Installation
+## Tobii Installation
   * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**).  
   * 2 Start the Tobii Eye Tracking and calibration.  
 
-## Detailed Procedure of Eye Tracking Data： 
+## Main Steps  
+### 1. WinDB Generation -> 2. Fixation Collection (Tobii) -> 3. Fixation Generation (ERP)  
+
+## Detailed Procedure of Eye Tracking Data:  
 
 ### 1. WinDB Generation  
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
@@ -28,7 +40,7 @@
   * 2 From ERP to WinDB based on **LonLat (lon.txt, lat.txt)** of WinDB.  
   ```python ERP2WinDB.py```
   
-### 2. Fixation Collection (Tobii)  
+### 2. Fixation Collection  
 <div align=center><img width="400" height="120" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
 <p align="center">The existing HMD-based method compares the advantages (+) and disadvantages (-) with our WinDB approach. </p>   
 
@@ -36,7 +48,7 @@
   * 2 Config property pages of ```start.sln```;    
   * 3 run the ```start.sln``` and the **fixation location(x, y)** will be saved in PeopleID.txt.  
 
-### 3. Fixation Generation (ERP)  
+### 3. Fixation Generation  
   * 1 Convert the **fixation location(x, y)** of WinDB to ERP;  
   * 2 Smooth the **fixation** of ERP on the Sphere.  
 
@@ -48,7 +60,7 @@
     **Training set**: 240 clips;    
     **Testing set**: 60 clips.  
 
-## Proposed Model (Baseline Model)
+## Proposed Model
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
 <p align="center">
 The motivation of the newly proposed model.   
