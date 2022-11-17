@@ -9,8 +9,9 @@
   * [1. WinDB Generation](#1-windb-generation)
   * [2. Fixation Collection](#2-fixation-collection)
   * [3. Fixation Generation](#3-fixation-generation)
+  * [4. Fixation Learning](#4-fixation-learning)
+  * [5. Evaluation](#5-evaluation)
 - [PanopticVideo-300 Dataset](#panopticvideo-300-dataset)
-- [Proposed Model](#proposed-model)
 
 
 ## Requirements.  
@@ -27,9 +28,9 @@
   * 2 Start the Tobii Eye Tracking and calibration.  
 
 ## Main Steps  
-### 1. WinDB Generation -> 2. Fixation Collection -> 3. Fixation Generation 
+### 1. WinDB Generation -> 2. Fixation Collection -> 3. Fixation Generation -> 4. Fixation Learning -> 5. Evaluation  
 
-## Detailed Procedure of Eye Tracking Data:  
+## Detailed Procedure of Fixation Learning Data:  
 
 ### 1. WinDB Generation  
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
@@ -52,15 +53,7 @@
   * 1) Convert the **fixation location(x, y)** of WinDB to ERP;  
   * 2) Smooth the **fixation** of ERP on the Sphere.  
 
-## PanopticVideo-300 Dataset
-<div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
-<p align="center">The semantic categories of PanopticVideo-300 dataset. All fixations in our set are collected by WinDB. </p>   
-
-  * Video Clips (300):  
-    **Training set**: 240 clips;    
-    **Testing set**: 60 clips.  
-
-## Proposed Model
+### 4. Fixation Learning
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
 <p align="center">
 The motivation of the newly proposed model.   
@@ -75,9 +68,17 @@ Our model has devised “a very simple yet effective” architecture, which perf
      Model.pt (51.2MB)
   * 4) Results  
      Results  
-  * 5) **Evaluation** Code (Matlab)  
+### 5. Evaluation  
     ```MatricsOfMyERP.m```  
     ```MatricsOfMyALLERP.m```
+    
+## PanopticVideo-300 Dataset
+<div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
+<p align="center">The semantic categories of PanopticVideo-300 dataset. All fixations in our set are collected by WinDB. </p>   
+
+  * Video Clips (300):  
+    **Training set**: 240 clips;    
+    **Testing set**: 60 clips.  
 
 ### Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information.  
 
