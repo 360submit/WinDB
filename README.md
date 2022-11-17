@@ -13,7 +13,7 @@
 ## Main Steps.  
 ### 1.WinDB Generation->2.Fixation Collection (Tobii)->3.Fixation Generation (ERP)  
 
-## The Install of Tobii  
+##  Tobii Installation
   * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (License.pdf)  
   * 2 run Tobii Eye Tracking and calibration.  
 
@@ -54,15 +54,15 @@ The motivation of the newly proposed model.
 Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set.   
 Our model has devised “a very simple yet effective” architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
 
-  * 1 The Training Process    
+  * 1 The **Training** Process    
      ```main.py Train=True```  
-  * 2 The Testing Process    
+  * 2 The **Inference** Process    
      ```main.py Test=True```  
-  * 3 The Model Weight   
+  * 3 The **Model Weight**   
      Model.pt (51.2MB)
   * 4 Results  
      Results  
-  * 5 Evaluation Code (Matlab)  
+  * 5 **Evaluation** Code (Matlab)  
     ```MatricsOfMyERP.m```  
     ```MatricsOfMyALLERP.m```
 
