@@ -7,7 +7,7 @@
 * python3.6.4   
 * pytorch1.10.0   
 * CUDA10.2    
-* Opencv python and C++ (VisualStudio)   
+* Opencv python and C++  
 * Tobii Eye Tracking installation package (TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)  
 
 ## Main Steps.  
@@ -15,9 +15,9 @@
 
 ##  Pre-operation --- Tobii Installation
   * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**).  
-  * 2 Start the Tobii Eye Tracking and calibration for the subject.  
+  * 2 Start the Tobii Eye Tracking and calibration.  
 
-## Detailed procedure： 
+## Detailed Procedure of Eye Tracking Data： 
 
 ### 1. WinDB Generation  
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
@@ -37,7 +37,7 @@
   * 3 run the ```start.sln``` and the Fixation Location(x, y) will be saved in PeopleID.txt.  
 
 ### 3. Fixation Generation (ERP)  
-  * 1 Convert the Location(x,y) of WinDB to ERP;  
+  * 1 Convert the Location(x, y) of WinDB to ERP;  
   * 2 Smooth the fixation of ERP on the Sphere.  
 
 ## PanopticVideo-300 Dataset
@@ -45,8 +45,8 @@
 <p align="center">The semantic categories of PanopticVideo-300 dataset. All fixations in our set are collected by WinDB. </p>   
 
   * Video Clips (300):  
-    **Training set** contains 240 clips;    
-    **Testing set** contains 60 clips.  
+    **Training set**: 240 clips;    
+    **Testing set**: 60 clips.  
 
 ## Proposed Model (Baseline Model)
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
@@ -67,5 +67,5 @@ Our model has devised “a very simple yet effective” architecture, which perf
     ```MatricsOfMyERP.m```  
     ```MatricsOfMyALLERP.m```
 
-## Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information, and our set contains no military or sensitive scenes.
+### Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information, and our set contains no military or sensitive scenes.   
 
