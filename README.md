@@ -23,9 +23,9 @@
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
 <p align="center">The overall pipeline of our new HMD-free fixation collection approach for panoptic data. Compared to the widely-used HMDbased method, our WinDB approach is more economical, comfortable, and reasonable. </p>    
 
-  * 1 Generate the longitude (lon.txt) and latitude (lat.txt) of WinDB;  
+  * 1 Generate the **longitude (lon.txt)** and **latitude (lat.txt)** of WinDB;  
   ```python ERP2WinDBLonLat.py``` 
-  * 2 From ERP to WinDB based on LonLat (lon.txt, lat.txt) of WinDB.  
+  * 2 From ERP to WinDB based on **LonLat (lon.txt, lat.txt)** of WinDB.  
   ```python ERP2WinDB.py```
   
 ### 2. Fixation Collection (Tobii)  
@@ -34,11 +34,11 @@
 
   * 1 Open the ```start.sln``` with Visual Studio 2019;  
   * 2 Config property pages of ```start.sln```;    
-  * 3 run the ```start.sln``` and the Fixation Location(x, y) will be saved in PeopleID.txt.  
+  * 3 run the ```start.sln``` and the **fixation location(x, y)** will be saved in PeopleID.txt.  
 
 ### 3. Fixation Generation (ERP)  
-  * 1 Convert the Location(x, y) of WinDB to ERP;  
-  * 2 Smooth the fixation of ERP on the Sphere.  
+  * 1 Convert the **fixation location(x, y)** of WinDB to ERP;  
+  * 2 Smooth the **fixation** of ERP on the Sphere.  
 
 ## PanopticVideo-300 Dataset
 <div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
