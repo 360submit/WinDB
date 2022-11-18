@@ -25,7 +25,7 @@
 
 ## Tobii Installation
   * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**).  
-  * 2 Start the Tobii Eye Tracking and calibration.  
+  * 2 Start the Tobii Eye Tracking ![image](https://github.com/cvpr-submission/WinDB/blob/main/Figs/TobiiL.GIF) and calibration.  
 
 ## Main Steps  
 ### 1. WinDB Generation -> 2. Fixation Collection -> 3. Fixation Generation -> 4. Fixation Learning -> 5. Evaluation  
