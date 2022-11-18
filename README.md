@@ -71,8 +71,10 @@ Our model has devised “a very simple yet effective” architecture, which perf
   * 4) Results  
      Results  
 ### 5. Evaluation  
-    ```MatricsOfMyERP.m```  
-    ```MatricsOfMyALLERP.m```
+  * 1) The score of every sequence
+  ```MatricsOfMyERP.m```  
+  * 2) The score of test set
+  ```MatricsOfMyALLERP.m```
     
 ## PanopticVideo-300 Dataset
 <div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
