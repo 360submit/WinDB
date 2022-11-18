@@ -71,7 +71,7 @@ Our model has devised “a very simple yet effective” architecture, which perf
   * 4) Results  
      Results  
 ### 5. Evaluation  
-  * 1) The score of every **sequence**  
+  * 1) The score of every **clip**  
   ```MatricsOfMyERP.m```  
   * 2) The score of the **Testing set**   
   ```MatricsOfMyALLERP.m```
