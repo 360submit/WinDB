@@ -52,8 +52,10 @@
 ### 3. Fixation Generation  
   * 1) Convert the **fixation location(x, y)** of WinDB to ERP;   
      fixation location(x, y)->WinDB location(theta, phi)->ERP Location(m, n)  
+     ```python Location2WinDB.py```   
   * 2) Smooth the **fixation** of ERP on the Sphere.   
      ERP Location(m, n)->Sphere Location(theta, phi)->Sphere Smooth->saliency  
+     ```python SphereSmooth.py```   
 
 ### 4. Fixation Learning
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
