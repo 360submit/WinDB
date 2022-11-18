@@ -24,7 +24,7 @@
 * Tobii Eye Tracking installation package (TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)  
 
 ## Tobii Installation
-  * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**).  
+  * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**![image](https://github.com/cvpr-submission/WinDB/blob/main/Figs/License.gif).  
   * 2 Start the Tobii Eye Tracking ![image](https://github.com/cvpr-submission/WinDB/blob/main/Figs/TobiiL.GIF) and calibration.  
 
 ## Main Steps  
