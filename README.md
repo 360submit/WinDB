@@ -1,7 +1,7 @@
 ### This repository contains the code for CVPR 2023 submission paper   
 # WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.  
 
-<img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/> It should be emphasized that our proposed **WinDB** uses C++ to read Tobii **fixation** data, so you only need to prepare a **Tobii device** without any additional charging software and with a **simple** configuration to very **easily** run WinDB.
+<img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/><img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/><img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/> It should be emphasized that our proposed **WinDB** uses C++ to read Tobii **fixation** data, so you only need to prepare a **Tobii device** without any additional charging software and with a **simple** configuration to very **easily** run WinDB.
 
 ## Table of Contents
 - [Requirements](#requirements)
@@ -75,9 +75,9 @@ Our model has devised “a very simple yet effective” architecture, which perf
   * 4) Results  
      Results  
 ### 5. Evaluation  
-  * 1) The score of every **clip**  
+  * 1) The score of every **Testing set clip**  
   ```MatricsOfMyERP.m```  
-  * 2) The score of the **Testing set**   
+  * 2) The score of the **All testing set**   
   ```MatricsOfMyALLERP.m```
     
 ## PanopticVideo-300 Dataset
