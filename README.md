@@ -24,7 +24,7 @@
 * Tobii Eye Tracking installation package (TobiiGhost.1.7.0-Setup.exe, Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe)  
 
 ## Tobii Installation
-  * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**<img width="300" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/License.gif"/>.  
+  * 1 Install Tobii_Eye_Tracking_Core_v2.16.8.214_x86.exe and TobiiGhost.1.7.0-Setup.exe (**License.pdf**<img width="300" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/License.gif"/>).  
   * 2 Start the Tobii Eye Tracking <img width="25" height="25" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/TobiiL.GIF"/> and calibration.  
 
 ## Main Steps  
@@ -45,9 +45,9 @@
 <div align=center><img width="400" height="120" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
 <p align="center">The existing HMD-based method compares the advantages (+) and disadvantages (-) with our WinDB approach. </p>   
 
-  * 1) Open the ```start.sln``` with Visual Studio 2019;  
-  * 2) Config property pages of ```start.sln```;    
-  * 3) run the ```start.sln``` and the **fixation location(x, y)** will be saved in PeopleID.txt.  
+  * 1) Open the ```start.sln```<img width="75" height="25" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/start.sln.gif"/> with Visual Studio 2019;  
+  * 2) Config property pages of ```start.sln```<img width="75" height="25" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/start.sln.gif"/>;    
+  * 3) run the ```start.spp```<img width="90" height="30" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/start.gif"/> and the **fixation location(x, y)** will be saved in PeopleID.txt.  
 
 ### 3. Fixation Generation  
   * 1) Convert the **fixation location(x, y)** of WinDB to ERP;   
