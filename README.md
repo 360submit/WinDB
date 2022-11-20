@@ -2,7 +2,7 @@
 # WinDB: HMD-free and Distortion-free Panoptic Video Fixation Learning.  
 
 <img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/><img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/><img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/star.gif"/> It should be emphasized that our proposed **WinDB** uses C++ to read Tobii **fixation** data, so you only need to prepare a **Tobii device** without any additional charging software and with a **simple** configuration to very **easily** run WinDB <img width="15" height="15" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/smile.gif"/>.
-However, the current way of collecting fixation for panoramic video data based on HMD is very complicated, requiring the installation of a large amount of software, such as Unity, Steam, VIVEPort..., and even expensive helmet-mounted displays and computer hosts equipped with high-end graphics cards.
+However, the current way of collecting fixation for panoramic video data based on HMD is very ***complicated***, requiring the installation of a ***large amount of software***, such as Unity, Steam, VIVEPort..., and even ***expensive*** HMD and computer hosts equipped with high-end GPU cards.
 
 ## Table of Contents
 - [Requirements](#requirements)
