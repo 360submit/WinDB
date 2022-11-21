@@ -37,7 +37,7 @@ However, the current way of collecting fixation for panoramic video data based o
 
 ### 1. WinDB Generation  
 <div align=center><img width="900" height="380" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/pip.gif"/></div>
-<p align="center">The overall pipeline of our new HMD-free fixation collection approach for panoptic data. Compared to the widely-used HMDbased method, our WinDB approach is more economical, comfortable, and reasonable. </p>    
+<p align="center">Figure 1. The overall pipeline of our new HMD-free fixation collection approach for panoptic data. Compared to the widely-used HMDbased method, our WinDB approach is more economical, comfortable, and reasonable. </p>    
 
   * 1) Generate the **longitude (lon.txt)** and **latitude (lat.txt)** of WinDB;  
   ```python ERP2WinDBLonLat.py``` 
@@ -46,7 +46,7 @@ However, the current way of collecting fixation for panoramic video data based o
   
 ### 2. Fixation Collection  
 <div align=center><img width="400" height="120" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Tobii.gif"/></div>
-<p align="center">The existing HMD-based method compares the advantages (+) and disadvantages (-) with our WinDB approach. </p>   
+<p align="center">Figure 2. The existing HMD-based method compares the advantages (+) and disadvantages (-) with our WinDB approach. </p>   
 
   * 1) Open the ```start.sln```<img width="75" height="25" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/start.sln.gif"/> with Visual Studio 2019;  
   * 2) Config property pages of ```start.sln```<img width="75" height="25" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/start.sln.gif"/>;    
@@ -63,7 +63,7 @@ However, the current way of collecting fixation for panoramic video data based o
 ### 4. Fixation Learning
 <div align=center><img width="600" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/Net.gif"/></div>
 <p align="center">
-The motivation of the newly proposed model.   
+Figure 3. The motivation of the newly proposed model.   
 Subfigures A and B illustrate the “fixation shifting” phenomenon — very common in our set.   
 Our model has devised “a very simple yet effective” architecture, which performs spatiotemporal self-attention to alleviate the fixation shifting-induced longdistance misalignment problem. </p>     
 
@@ -83,7 +83,7 @@ Our model has devised “a very simple yet effective” architecture, which perf
     
 ## PanopticVideo-300 Dataset
 <div align=center><img width="400" height="400" src="https://github.com/cvpr-submission/WinDB/blob/main/Figs/class.gif"/></div>
-<p align="center">The semantic categories of PanopticVideo-300 dataset. All fixations in our set are collected by WinDB. </p>   
+<p align="center">Figure 4. The semantic categories of PanopticVideo-300 dataset. All fixations in our set are collected by WinDB. </p>   
 
   * Video Clips (300):  
     **Training set**: 240 clips;    
