@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  start.cpp
+C:\Users\1\Desktop\TheDataset\start\start.cpp(34,6): warning C4215: 使用了非标准扩展: 长浮点
+C:\Users\1\Desktop\TheDataset\start\start.cpp(192,44): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\1\Desktop\TheDataset\start\start.cpp(192,92): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\1\Desktop\TheDataset\start\start.cpp(159,8): warning C4101: “onoff”: 未引用的局部变量
+  start.vcxproj -> C:\Users\1\Desktop\TheDataset\x64\Debug\start.exe

@@ -1,0 +1,5 @@
+C:\Users\China\Desktop\Tobbi\Tobii\Localization_gaze_and_Python\x64\Release\tobii_stream_engine.dll
+G:\Tobbi\Tobii\Localization_gaze_and_Python\x64\Release\tobii_stream_engine.dll
+G:\py360convert-master\py360convert-master\Localization_gaze_and_Python\x64\Release\tobii_stream_engine.dll
+F:\projection\py360convert-master1\Localization_gaze_and_Python\x64\Release\tobii_stream_engine.dll
+F:\projection\Perspective-and-Equirectangular-master\Localization_gaze_and_Python\x64\Release\tobii_stream_engine.dll

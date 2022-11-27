@@ -1,0 +1,3 @@
+D:\Perspective-and-Equirectangular-master\Localization_gaze_and_Python\x64\Debug\tobii_stream_engine.dll
+D:\Perspective-and-Equirectangular-master\Localization_gaze_and_Python2\x64\Debug\tobii_stream_engine.dll
+C:\Users\1\Desktop\TheDataset\x64\Debug\tobii_stream_engine.dll

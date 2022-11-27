@@ -1,0 +1,6 @@
+﻿  start.cpp
+c:\users\msi-pc\desktop\tobii\start\start\start.cpp(17): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“const int64_t”
+  c:\users\msi-pc\desktop\tobii\start\start\start.cpp(17): note: 请考虑在格式字符串中使用“%lld”
+  c:\users\msi-pc\desktop\tobii\start\start\start.cpp(17): note: 请考虑在格式字符串中使用“%I64d”
+  start.vcxproj -> C:\Users\MSI-PC\Desktop\Tobii\start\Debug\start.exe
+  start.vcxproj -> C:\Users\MSI-PC\Desktop\Tobii\start\Debug\start.pdb (Full PDB)

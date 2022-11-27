@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  start.cpp
+D:\Perspective-and-Equirectangular-master\Localization_gaze_and_Python\start\start.cpp(33,6): warning C4215: 使用了非标准扩展: 长浮点
+D:\Perspective-and-Equirectangular-master\Localization_gaze_and_Python\start\start.cpp(155,7): warning C4101: “onoff”: 未引用的局部变量
+start.obj : error LNK2001: 无法解析的外部符号 "void __cdecl cv::GaussianBlur(class cv::_InputArray const &,class cv::_OutputArray const &,class cv::Size_<int>,double,double,int)" (?GaussianBlur@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@V?$Size_@H@1@NNH@Z)
+start.obj : error LNK2001: 无法解析的外部符号 "public: void __cdecl cv::Mat::copyTo(class cv::_OutputArray const &,class cv::_InputArray const &)const " (?copyTo@Mat@cv@@QEBAXAEBV_OutputArray@2@AEBV_InputArray@2@@Z)
+start.obj : error LNK2001: 无法解析的外部符号 "void __cdecl cv::imshow(class cv::String const &,class cv::_InputArray const &)" (?imshow@cv@@YAXAEBVString@1@AEBV_InputArray@1@@Z)
+D:\Perspective-and-Equirectangular-master\Localization_gaze_and_Python\x64\Release\start.exe : fatal error LNK1120: 3 个无法解析的外部命令
