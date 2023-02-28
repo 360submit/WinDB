@@ -89,5 +89,5 @@ Our model has devised “a very simple yet effective” architecture, which perf
     **Training set**: 240 clips;    
     **Testing set**: 60 clips.  
 
-### Please note that to meet the CVPR2023 blind requirements, this code hides the issue and related personal information.  
+### Please note that to meet the blind requirements, this code hides the issue and related personal information.  
 
